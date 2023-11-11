@@ -1,17 +1,13 @@
 import React from "react";
+import "./Styles.css";
 
-const TodoItem = ({ todo, onSelect, isSelected }) => {
+const TodoItem = ({ todo, onSelect, onRemove, isSelected }) => {
   return (
-    <div
-      style={{
-        padding: "10px",
-        margin: "5px",
-        backgroundColor: isSelected ? "lightblue" : "lightgrey",
-        cursor: "pointer",
-      }}
-      onClick={() => onSelect(todo)}
-    >
-      {todo}
+    <div className={`todo-item ${isSelected ? "selected" : ""}`}>
+      <span onClick={() => onSelect(todo)}>{todo}</span>
+      <button className="button remove" onClick={() => onRemove(todo)}>
+        Remove
+      </button>
     </div>
   );
 };
