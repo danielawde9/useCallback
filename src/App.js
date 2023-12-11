@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
-import WithUseCallback from './WithUseCallback';
-import WithoutUseCallback from './WithoutUseCallback';
+import React, { useState } from "react";
+import Todos from "./Todos";
 
-function App() {
-  const [theme, setTheme] = useState('light');
+const App = () => {
+  const [count, setCount] = useState(0);
 
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+  const increment = () => {
+    setCount((c) => c + 1);
   };
 
+
   return (
-    <div className={theme}>
-      <WithUseCallback />
-      <WithoutUseCallback />
-      <button onClick={toggleTheme}>Toggle Theme</button>
-    </div>
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
   );
-}
+};
+
+export default App;
