@@ -11,5 +11,6 @@ Setup the React App:
 
 - Use create-react-app to set up a new React project.
 - Create Two Components:
-    - WithUseCallback: This component will use the useCallback hook for its function.
-    - WithoutUseCallback: This component will not use useCallback.
+    WithUseCallback: Implements a counter with useCallback.
+    WithoutUseCallback: Implements a counter without useCallback.
+
