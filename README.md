@@ -1,4 +1,4 @@
-# Exercise: Bookstore Manager
+# Exercise: Todo list
 
 add use state array for the todo list
 
