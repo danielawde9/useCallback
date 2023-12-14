@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Todos from "./Todos";
 
 const App = () => {
@@ -7,7 +7,8 @@ const App = () => {
   const increment = () => {
     setCount((c) => c + 1);
   };
-  // add use state array for the todo list 
+
+  // add use state array for the todo list
 
   // add function for adding todo on the todo list array
 
